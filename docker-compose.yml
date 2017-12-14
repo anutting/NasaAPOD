@@ -1,0 +1,21 @@
+version: '2'
+services:
+  database:
+    image: mongo
+    hostname: mongo
+    ports:
+      -"80:80"
+    volumes:
+      - ./data/db:/data/db
+    networks:
+      apod:
+        aliases:
+          - mongo
+  webapp:
+    build: .
+    networks:
+      - apod
+    working_dir: /srv/www
+    command: node bin/www
+networks:
+  apod:

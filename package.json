@@ -1,0 +1,25 @@
+{
+  "name": "nasaapod",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "DEBUG=nasaapod:* nodemon ./bin/www",
+    "start:prod": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "bootstrap": "^3.3.7",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.15.5",
+    "mongoose": "^4.13.7",
+    "morgan": "~1.9.0",
+    "node-fetch": "^1.7.3",
+    "node-schedule": "^1.2.5",
+    "pug": "2.0.0-beta11",
+    "serve-favicon": "~2.4.5"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.7"
+  }
+}

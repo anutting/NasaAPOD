@@ -1,0 +1,13 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions": [
+    {
+      "name:": "mongo",
+      "image": "mongo",
+      "essential": true
+    },{
+      "name": "apod-frontend",
+      ""
+    }
+  ]
+}

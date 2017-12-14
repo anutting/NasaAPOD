@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  div.container-fluid
+    div.row
+      div.col-md-2
+      div.col-md-8
+        h1.text-center Astronomy Picture of the Day
+        div.jumbotron
+          -var url = apods[0].url
+          h2.pull-left #{apods[0].title}
+          h2.pull-right #{apods[0].date}
+          img.img-responsive.center-block(src=url)
+          h2.text-center Copyright: #{apods[0].copyright}
+          p #{apods[0].explanation}
+      div.col-md-2
+    div.row
+      div.col-md-12
+      h2.text-center Previous APODs
+      table.table.table-responsive
+        thead
+          tr
+            th Date
+            th copyright
+            th url
+        tbody
+          each apod, index in apods
+            if index != 0
+              tr
+                td #{apod.date}
+                td #{apod.copyright}
+                td #{apod.url}
